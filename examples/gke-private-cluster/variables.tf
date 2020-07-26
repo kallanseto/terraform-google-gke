@@ -26,19 +26,19 @@ variable "region" {
 variable "cluster_name" {
   description = "The name of the Kubernetes cluster."
   type        = string
-  default     = "example-private-cluster"
+  default     = "kase-dev"
 }
 
 variable "cluster_service_account_name" {
   description = "The name of the custom service account used for the GKE cluster. This parameter is limited to a maximum of 28 characters."
   type        = string
-  default     = "example-private-cluster-sa"
+  default     = "kase-dev-private-cluster-sa"
 }
 
 variable "cluster_service_account_description" {
   description = "A description of the custom service account used for the GKE cluster."
   type        = string
-  default     = "Example GKE Cluster Service Account managed by Terraform"
+  default     = "GKE Cluster Service Account managed by Terraform"
 }
 
 variable "master_ipv4_cidr_block" {
@@ -66,5 +66,5 @@ variable "vpc_secondary_cidr_block" {
 variable "enable_vertical_pod_autoscaling" {
   description = "Enable vertical pod autoscaling"
   type        = string
-  default     = true
+  default     = false
 }
